@@ -7,15 +7,13 @@ class editAsignatura():
         Base.metadata.create_all(engine)
 
     def editar_asignatura(self, nombreAsignatura, nombreDocente):
-
         if (len(nombreAsignatura) and len(nombreDocente))==0:
             return False
-        busqueda = session.query(Asignatura).filter(Asignatura.nombreAsignatura == nombreAsignatura and Asignatura.nombreDocente == nombreDocente).all()
+        busqueda = session.query(Asignatura).filter(Asignatura.nombreAsignatura == nombreAsignatura, Asignatura.nombreDocente == nombreDocente).all()
         if len(busqueda) == 0:
-            asignatura = session.query(Asignatura).get(2)
-            asignatura1 = Asignatura(nombreAsignatura=nombreAsignatura, nombreDocente=nombreDocente)
-            session.add(asignatura1)
-            session.delete(asignatura)
+            asignatura = session.query(Asignatura).filter(Asignatura.idAsignatura == 1).first()
+            asignatura.nombreAsignatura = nombreAsignatura
+            asignatura.nombreDocente = nombreDocente
             session.commit()
             return True
         else:
