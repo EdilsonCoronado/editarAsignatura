@@ -7,7 +7,7 @@ class editAsignatura():
         Base.metadata.create_all(engine)
 
     def editar_asignatura(self, nombreAsignatura, nombreDocente):
-        if (len(nombreAsignatura) and len(nombreDocente))==0:
+        if (len(nombreAsignatura) and len(nombreDocente)) == 0:
             return False
         busqueda = session.query(Asignatura).filter(Asignatura.nombreAsignatura == nombreAsignatura, Asignatura.nombreDocente == nombreDocente).all()
         if len(busqueda) == 0:

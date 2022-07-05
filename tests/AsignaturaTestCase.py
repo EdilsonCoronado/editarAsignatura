@@ -31,7 +31,7 @@ class AsignaturaTestCase ( unittest.TestCase ) :
         self.assertEqual ( resultado , True )
 
     def test_editar_asignatura_mismos_datos(self):
-        resultado = self.gestionAsignatura.editar_asignatura (nombreAsignatura = "Construccion de Software", nombreDocente = "Daniel Gamarra")
+        resultado = self.gestionAsignatura.editar_asignatura (nombreAsignatura = "Construccion de Software", nombreDocente = "Daniel Gamarra" )
         self.assertEqual ( resultado , False )
 
     def test_editar_asignatura_datos_vacios ( self ) :
