@@ -3,6 +3,7 @@ from src.modelo.asignatura import Asignatura
 from src.logica.editAsignatura import editAsignatura
 from src.modelo.declarative_base import Session
 
+
 class AsignaturaTestCase ( unittest.TestCase ) :
     def setUp ( self ) :
         # Crea una gestionAsignatura para hacer las pruebas
