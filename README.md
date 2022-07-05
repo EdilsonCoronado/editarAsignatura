@@ -32,3 +32,7 @@ Valiosa      | Conforme   |Ana            |
 Estimable    | Conforme   |Edilson        |
 Pequeña      | Conforme   |Paola          |
 Comprobable  | Conforme   |Paola          |
+
+Wireframe para la historia de usuario: HU002
+
+![wireframe](https://user-images.githubusercontent.com/108704131/177352011-a889f16e-346a-4b18-bd2a-40f75817e070.jpg)

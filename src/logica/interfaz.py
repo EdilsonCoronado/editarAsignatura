@@ -21,15 +21,16 @@ class Interfaz(QMainWindow):
         docente = self.output_2.text()
         """asignatura = asign.nombreAsignatura
         docente = asign.nombreDocente"""
-        asignatura = self.input_1.text()
-        docente = self.input_2.text()
-        self.btnAceptar.clicked.connect(self.editando(asignatura, docente))
+
+        self.btnAceptar.clicked.connect(self.editando)
         self.btnCancelar.clicked.connect(self.exit_app)
 
 
-    def editando(self, asignatura, docente):
+    def editando(self):
+        asignatura = self.input_1.text()
+        docente = self.input_2.text()
 
-        if(editAsignatura.editar_asignatura(asignatura, docente)) == False:
+        if(editAsignatura.editar_asignatura(nombreAsignatura=asignatura, nombreDocente=docente)) == False:
             mensaje = messagebox.showinfo("Error", "No es posible hacer el cambio")
         else:
             mensaje = messagebox.showinfo("Guardado", "Cambio realizado con exito")
